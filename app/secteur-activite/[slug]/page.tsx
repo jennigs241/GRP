@@ -53,52 +53,132 @@ const secteursDetails: Record<string, { title: string; subtitle: string; image?:
       "• Gestion spécialisée des boues et des eaux de cale pour assurer la conformité environnementale et la sécurité à bord."
     ]
   },
-  "conseil-financier": {
-    title: "Conseil Financier",
-    subtitle: "Stratégie, gestion d'actifs, audit et optimisation de la performance financière globale.",
+  "gestion-quai": {
+    title: "Gestion de Quai",
+    subtitle: "Nous proposons aux autorités portuaires et aux propriétaires de terminaux privés une solution clé en main pour la gestion opérationnelle des quais. Nous transformons vos infrastructures en zones de haute performance grâce à une présence physique constante et une rigueur logistique absolue.",
+    image: "/WhatsApp-Imagesss-2026-01-27-at-14.34.23-1.jpeg",
     content: [
-      "Nous accompagnons les organisations dans la structuration de leurs investissements, la levée de fonds et l'optimisation de leur gestion financière.",
-      "Nos experts réalisent des audits rigoureux et conseillent les décideurs pour maximiser la rentabilité tout en maîtrisant les risques."
+      "Nous proposons aux autorités portuaires et aux propriétaires de terminaux privés une solution clé en main pour la gestion opérationnelle des quais. Nous transformons vos infrastructures en zones de haute performance grâce à une présence physique constante et une rigueur logistique absolue.",
+      "1. Lamanage Professionnel",
+      "• Sécurité des manœuvres : Nous contrôlons la maîtrise des interfaces navire-terre pour garantir l'intégrité de vos infrastructures.",
+      "• Équipes de Réception : Personnel qualifié posté à l'arrivée pour la saisie des amarres et la sécurisation du navire.",
+      "• Maîtrise des Forces : Opérations d'amarrage et de désamarrage réalisées dans le respect des normes de sécurité, protégeant les bornes et les défenses de quai.",
+      "• Coordination Radio : Liaison constante avec le pilote et la capitainerie pour un positionnement millimétré du navire.",
+      "2. Maintenance et Salubrité des Infrastructures",
+      "La propreté d'un quai est le premier indicateur de sécurité opérationnelle. Nos équipes assurent un environnement de travail impeccable.",
+      "• Politique Clean-Quay : Nettoyage systématique des zones de travail avant et après chaque escale (évacuation des résidus, bois d'arrimage, déchets).",
+      "• Entretien Courant : Surveillance de l'état des quais et signalement immédiat des besoins de maintenance (éclairage, défenses, marquage au sol).",
+      "3. Gestion Dynamique des Zones de Stockage",
+      "Nous maximisons la rentabilité de chaque mètre carré de vos terre-pleins.",
+      "• Sectorisation Stratégique : Organisation des zones de stockage par type de fret pour optimiser les flux de circulation.",
+      "• Gestion des Flux Terre-Mer : Interface entre les opérations de levage (grues/portiques) et les zones d'entreposage pour éviter toute congestion.",
+      "• Traçabilité & Inventaire : Suivi rigoureux des marchandises en attente sur vos surfaces de stockage."
+    ]
+    },
+  "service-pi": {
+    title: "Service P&I (Protection & Indemnity)",
+    subtitle: "Protection & Représentation des Intérêts Une gestion rigoureuse des risques et des sinistres maritimes. ",
+    image: "/PI-IMAGE.png",
+    content: [
+      "Protection & Représentation des Intérêts : Une gestion rigoureuse des risques et des sinistres maritimes. En tant qu'intermédiaire privilégié entre les Clubs P&I, les armateurs et les autorités locales, l'Agence de l'Ogooué agit comme votre représentant local pour protéger vos intérêts financiers et juridiques en cas d'incident.",
+      "1. Assistance aux Correspondants P&I",
+      "Nous servons de point de contact local pour faciliter les interventions des représentants des Clubs :",
+      "• Coordination d'urgence : Assistance immédiate en cas d'accident, de collision ou d'avarie majeure.",
+      "• Logistique d'expertise : Organisation du transport et de l'accès à frontière pour les experts (surveyors) et les avocats maritimes.",
+      "2. Gestion des Réclamations",
+      "Nous vous assistons dans la gestion des litiges courants liés à l'exploitation du navire :",
+      "• Dommages à la cargaison : Constats, suivi du déchargement et gestion des réserves.",
+      "• Pollution maritime : Interface avec les autorités en cas d'incident lié à la convention MARPOL.",
+      "• Dommages aux installations portuaires : Évaluation et médiation lors de contacts avec les quais ou les grues.",
+      "• Gestion des hospitalisations et rapatriements : Prise en charge des formalités administratives liées à la MLC 2006.",
+      "3. Enquêtes et Constats",
+      "Nous organisons des expertises indépendantes pour documenter les faits :",
+      "• Draft Surveys & Bunker Surveys : Contrôle des poids et des hydrocarbures.",
+      "• Condition Surveys : État des lieux du navire à l'entrée ou à la sortie de la flotte (On-hire / Off-hire)."
     ]
   },
-  "immobilier-btp": {
-    title: "Immobilier & BTP",
-    subtitle: "Développement de projets d'envergure, conception architecturale et construction d'infrastructures durables.",
+  "consignation": {
+    title: "Consignation de Navires",
+    subtitle: "Nos services d'agents shippings et de manutention couvrent l'ensemble des besoins opérationnels pour la gestion des navires et des cargaisons, en assurant sécurité, efficacité et conformité aux normes maritimes.",
+     image: "/WhatsApp-Immage-20h26-03-05-at-21.43.33.jpeg",
     content: [
-      "Nous intervenons sur l'ensemble du cycle de vie des projets immobiliers et de construction, du foncier à la livraison clé en main.",
-      "Notre engagement : bâtir des infrastructures modernes, sécurisées et respectueuses des normes environnementales."
+      "Nos services d'agents shippings et de manutention couvrent l'ensemble des besoins opérationnels pour la gestion des navires et des cargaisons, en assurant sécurité, efficacité et conformité aux normes maritimes.",
+      "Nos Services :",
+      "• Fouilles des navires : Inspection complète pour garantir la sécurité et la conformité aux réglementations.",
+      "• Service de manutention : Gestion efficace du chargement, du déchargement et du déplacement des marchandises.",
+      "• Assistance au navire et à l'équipage (Husbandry) : Soutien logistique et opérationnel complet aux équipes à bord.",
+      "• Gestion administrative des navires : Prise en charge rigoureuse des formalités portuaires et réglementaires.",
+      "• Suivi des opérations de chargement et déchargement : Supervision continue pour assurer la précision et la sécurité des opérations.",
+      "• Coordination des opérations de manutention : Liaison fluide entre les équipes de quai et le navire pour un flux sans encombre."
     ]
   },
-  "tourisme-hotellerie": {
-    title: "Tourisme & Hôtellerie",
-    subtitle: "Développement de destinations de prestige et gestion d'infrastructures hôtelières haut de gamme.",
+  "plongee-professionnelle": {
+    title: "Plongée Professionnelle & Maintenance Sous-Marine",
+    subtitle: "Notre équipe de plongeurs professionnels et de techniciens certifiés intervient dans les environnements maritimes les plus exigeants pour garantir la continuité de vos opérations et la sécurité de vos infrastructures.",
+    image: "/Ccapture décran 2026-08-17 213235.jpg",
     content: [
-      "Nous concevons et exploitons des projets touristiques qui valorisent le patrimoine local tout en offrant des standards de service internationaux.",
-      "Notre approche garantit une expérience mémorable pour les voyageurs et une rentabilité pérenne pour les investisseurs."
+      "Notre équipe de plongeurs professionnels et de techniciens certifiés intervient dans les environnements maritimes les plus exigeants pour garantir la continuité de vos opérations et la sécurité de vos infrastructures.",
+      "1. Inspections et Expertises Sous-Marines",
+      "• Visuelles et NDT (Contrôles non destructifs) : Inspection rigoureuse des œuvres vives des navires, des soudures et des structures métalliques immergées.",
+      "• Rapports d'expertise : Fourniture de comptes rendus détaillés (photos et vidéos HD) pour évaluer l'état des ouvrages (quais, piles de ponts, émissaires).",
+      "2. Maintenance et Travaux Portuaires",
+      "• Maintenance des ouvrages : Entretien et réparation des défenses de quai, des anodes sacrificielles et des batardeaux.",
+      "• Nettoyage de coques : Déracinage et brossage des œuvres vives pour optimiser l'hydrodynamisme et réduire la consommation de carburant des navires.",
+      "3. Interventions d'Urgence et Secours",
+      "• Dégagement d'hélices : Intervention rapide en cas d'emmêlement de filets, de câbles ou de cordages sur les propulseurs.",
+      "• Colmatage et assistance d'urgence : Sécurisation de navires en avarie nécessitant une intervention technique sous la ligne de flottaison."
+    ]
+    
+  },
+  "placement-personnel-naviguant": {
+    title: "Placement et Gestion du Personnel Naviguant",
+    subtitle: "Dans un secteur maritime en constante évolution, la compétence et la fiabilité de l'équipage constituent les véritables piliers de la sécurité en mer et de la rentabilité de vos opérations. Nous sélectionnons, plaçons et administrons des profils hautement qualifiés pour garantir la continuité, l'efficacité et la conformité réglementaire de vos missions maritimes et fluviales.",
+    image: "/WjhatsApp-Image-2026-03-05-at-21.43.35-2.jpeg",
+    content: [
+      "Dans un secteur maritime en constante évolution, la compétence et la fiabilité de l'équipage constituent les véritables piliers de la sécurité en mer et de la rentabilité de vos opérations.",
+    "Nous structurons des réseaux logistiques fluides et performants pour relier les centres de production aux marchés de consommation.",
+    "Sécurité, traçabilité et ponctualité sont au cœur de nos engagements opérationnels.",
+    "Nous proposons des solutions de crewing sur mesure, adaptées aux besoins des armateurs et des gestionnaires de navires.",
+    "1. Recrutement et Sélection Rigoureuse : Nous identifions les meilleurs profils pour chaque type de navire (remorqueurs, navires de servitude offshore, cargos, supply boats).",
+    "Vérification de la validité des titres : Contrôle systématique des brevets (STCW), des certificats de sécurité et des livrets professionnels.",
+    "Évaluation technique : Tests de compétences spécifiques selon le rang (Officiers de pont, Officiers mécaniciens, Maistrance et Équipage).",
+    "Contrôle d'aptitude médicale : Vérification rigoureuse des certificats médicaux d'aptitude à la navigation.",
+    "2. Placement et Gestion Contractuelle : Nous simplifions vos démarches administratives en assurant une liaison fluide entre les marins et les armateurs.",
+    "Établissement des contrats d'engagement maritime : Conformité stricte avec la législation locale et les conventions internationales (MLC 2006).",
+    "Gestion des relèves : Planification et coordination logistique pour garantir la continuité du service à bord.",
+    "Suivi de carrière : Mise à jour continue des dossiers des marins pour anticiper les renouvellements de certificats.",
+    "3. Spécialisation Offshore et Portuaire : Grâce à notre expertise locale, nous disposons d'un vivier de marins qualifiés pour des opérations spécifiques.",
+    "Personnel de pont et machine pour les opérations de remorquage et d'assistance.",
+    "Équipes spécialisées pour le secteur pétrolier et gazier offshore.",
+    "Cuisiniers et personnel hôtelier formés aux exigences rigoureuses de la vie en mer.",
+    "4. Formation et Mise à Niveau : Pour maintenir un haut niveau de performance, nous accompagnons nos marins dans l'identification des besoins en formation continue.",
+    "La sensibilisation accrue à la sécurité (HSE) et à la protection de l'environnement marin.",
+    "La maîtrise de l'anglais technique maritime pour les équipages opérant dans un contexte international.",
+    "Nos Engagements : Conformité MLC 2006 (Garantie d'un recrutement éthique et respectueux des droits des gens de mer), Réactivité (Capacité avérée à mobiliser du personnel qualifié dans des délais courts pour pallier les urgences) et Qualité (Un processus de sélection transparent visant à réduire le turn-over et à stabiliser durablement vos équipages)."
     ]
   },
-  "energie-ressources": {
-    title: "Énergie & Ressources",
-    subtitle: "Exploitation responsable des ressources et développement de solutions énergétiques durables.",
+  "manutention-onshore-offshore": {
+    title: "manutention-onshore-offshore",
+    subtitle: "Stevedoring & Acconage",
+    image: "/manutention-des-navires.jpg",
     content: [
-      "Face aux défis climatiques et énergétiques, nous accompagnons la transition vers des sources d'énergie plus propres et une gestion optimisée des ressources naturelles.",
-      "Nous allions performance industrielle et responsabilité environnementale."
-    ]
-  },
-  "transport-logistique": {
-    title: "Transport & Logistique Terrestre",
-    subtitle: "Optimisation des chaînes d'approvisionnement et des réseaux de transport de marchandises.",
-    content: [
-      "Nous structurons des réseaux logistiques fluides et performants pour relier les centres de production aux marchés de consommation.",
-      "Sécurité, traçabilité et ponctualité sont au cœur de nos engagements opérationnels."
-    ]
-  },
-  "sante-pharma": {
-    title: "Santé & Pharma",
-    subtitle: "Renforcement des infrastructures médicales et amélioration de l'accès aux soins et aux produits de santé.",
-    content: [
-      "Nous soutenons le secteur de la santé à travers la modernisation des infrastructures, l'approvisionnement sécurisé en produits pharmaceutiques et le respect des normes sanitaires.",
-      "Notre mission : contribuer durablement au bien-être des populations."
+      "Maillon essentiel de la chaîne logistique maritime, notre service de stevedoring assure une interface rapide et sécurisée entre le navire et la terre. Nous combinons expertise technique, main-d'œuvre qualifiée et équipements adaptés pour optimiser le temps d'escale de vos navires.",
+        "1. Chargement et Déchargement de Navires : Nous intervenons sur différents types de cargaisons avec une maîtrise totale des cadences.",
+        "Marchandises Conventionnelles (Breakbulk) : Manipulation de sacs, caisses, palettes et colis divers.",
+        "Charges Lourdes et Projets Industriels : Expertise spécifique pour le levage d'engins, de structures métalliques et de colis hors gabarit.",
+        "Vracs Solides : Opérations de déchargement de minerais, matériaux de construction ou produits agricoles.",
+        "2. Saisissage et Arrimage (Lashing) : La sécurité de la marchandise durant la traversée est notre priorité.",
+        "Calcul d'arrimage : Optimisation de l'espace en cale ou sur le pont tout en respectant la stabilité du navire.",
+        "Saisissage professionnel : Utilisation de matériel certifié (chaînes, sangles, ridoirs) pour immobiliser parfaitement les cargaisons.",
+        "Protection des marchandises : Pose de calages et de protections pour prévenir tout dommage pendant le transport.",
+        "3. Gestion des Opérations de Quai : Nous fluidifions le passage portuaire pour éviter les congestions.",
+        "Réception et livraison : Contrôle rigoureux des marchandises à l'entrée et à la sortie de la zone sous douane.",
+        "Pointage et Tally : Inventaire précis et rapport de dommages (Survey) en temps réel pour une transparence totale.",
+        "Transfert Horizontal : Acheminement efficace entre le pied de grue et les zones de stockage ou les camions.",
+        "4. Expertise en Manutention Spécialisée : Nos dockers et chefs de chantier sont formés aux spécificités du terrain.",
+        "Utilisation d'engins de levage : Grues de bord, grues de quai et chariots élévateurs de forte capacité.",
+        "Coordination de bord : Liaison constante entre le bord (Second Capitaine) et la terre pour un plan de chargement optimal.",
+        "Nos Engagements de Performance : Productivité (réduction des temps d'attente à quai grâce à une planification rigoureuse des équipes), Zéro Dommage (protocoles de manipulation stricts pour garantir l'intégrité de vos marchandises) et Disponibilité 24/7 (capacité à mobiliser des équipes de jour comme de nuit pour respecter les fenêtres de marée ou les impératifs de ligne)."
     ]
   }
 };

@@ -27,7 +27,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="flex items-center gap-6 pt-6 text-xs text-gray-400">
-              <span className="flex items-center gap-1">📍 Libreville (GABON)</span>
+              <span className="flex items-center gap-1">📍 SNI, Owendo (GABON)</span>
               <span className="flex items-center gap-1">⚓ Expert en Maritime</span>
             </div>
           </div>
