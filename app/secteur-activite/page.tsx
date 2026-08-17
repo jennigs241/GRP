@@ -1,5 +1,54 @@
 import Link from "next/link";
 
+// Définition des données des 9 secteurs
+const secteurs = [
+  {
+    slug: "logistique-maritime",
+    title: "Logistique Maritime & Portuaire",
+    description: "Leader dans la gestion portuaire et le transport maritime international, assurant une fluidité optimale des flux commerciaux et logistiques.",
+  },
+  {
+    slug: "transformation-numerique",
+    title: "Transformation Numérique",
+    description: "Accompagnement technologique pour moderniser les infrastructures IT, la cybersécurité et déployer des solutions digitales innovantes.",
+  },
+  {
+    slug: "conseil-financier",
+    title: "Conseil Financier",
+    description: "Expertise stratégique pour la gestion d'actifs, les fusions-acquisitions, l'audit et l'optimisation de la performance financière globale.",
+  },
+  {
+    slug: "immobilier-btp",
+    title: "Immobilier & BTP",
+    description: "Développement de projets immobiliers d'envergure, conception architecturale et construction d'infrastructures durables.",
+  },
+  {
+    slug: "tourisme-hotellerie",
+    title: "Tourisme & Hôtellerie",
+    description: "Développement de destinations de prestige, gestion d'infrastructures hôtelières haut de gamme et promotion du tourisme local.",
+  },
+  {
+    slug: "energie-ressources",
+    title: "Énergie & Ressources",
+    description: "Exploitation responsable des ressources naturelles et développement de solutions énergétiques renouvelables et durables.",
+  },
+  {
+    slug: "transport-terrestre",
+    title: "Transport & Logistique Terrestre",
+    description: "Optimisation des chaînes d'approvisionnement terrestres, transport routier et ferroviaire de marchandises à travers le continent.",
+  },
+  {
+    slug: "sante-pharma",
+    title: "Santé & Pharma",
+    description: "Investissements dans les infrastructures médicales, distribution pharmaceutique et amélioration de l'accès aux soins de qualité.",
+  },
+  {
+    slug: "agriculture-agro-industrie",
+    title: "Agriculture & Agro-industrie",
+    description: "Développement de filières agricoles performantes, transformation locale et renforcement de la sécurité alimentaire régionale.",
+  },
+];
+
 export default function SecteurActivitePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -19,8 +68,7 @@ export default function SecteurActivitePage() {
       </section>
 
       {/* SECTION MULTISECTORIELLE & GRILLE DES 9 SECTEURS */}
-      <section className="py-20 px-6 max-w-7xl mx-auto space-y-16">
-        
+      <section className="py-20 px-6 max-w-7xl mx-auto space-y-16 w-full">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs uppercase tracking-widest text-blue-600 font-semibold">
             Expertise & Vision
@@ -33,90 +81,27 @@ export default function SecteurActivitePage() {
           </p>
         </div>
 
-        {/* Grille des 9 cartes */}
+        {/* Grille des 9 cartes dynamiques */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* 1. Logistique Maritime & Portuaire */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Logistique Maritime & Portuaire</h3>
-              <p className="text-gray-600">Leader dans la gestion portuaire et le transport maritime international, assurant une fluidité optimale des flux commerciaux et logistiques.</p>
+          {secteurs.map((secteur) => (
+            <div 
+              key={secteur.slug} 
+              className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4"
+            >
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#0a1b3d]">{secteur.title}</h3>
+                <p className="text-gray-600">{secteur.description}</p>
+              </div>
+              
+              {/* Lien dynamique pointant vers /secteur-activite/[slug] */}
+              <Link 
+                href={`/secteur-activite/${secteur.slug}`}
+                className="inline-block text-[#1e40af] font-semibold hover:underline"
+              >
+                En savoir plus →
+              </Link>
             </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 2. Transformation Numérique */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Transformation Numérique</h3>
-              <p className="text-gray-600">Accompagnement technologique pour moderniser les infrastructures IT, la cybersécurité et déployer des solutions digitales innovantes.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 3. Conseil Financier */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Conseil Financier</h3>
-              <p className="text-gray-600">Expertise stratégique pour la gestion d'actifs, les fusions-acquisitions, l'audit et l'optimisation de la performance financière globale.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 4. Immobilier & BTP */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Immobilier & BTP</h3>
-              <p className="text-gray-600">Développement de projets immobiliers d'envergure, conception architecturale et construction d'infrastructures durables.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 5. Tourisme & Hôtellerie */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Tourisme & Hôtellerie</h3>
-              <p className="text-gray-600">Développement de destinations de prestige, gestion d'infrastructures hôtelières haut de gamme et promotion du tourisme local.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 6. Énergie & Ressources */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Énergie & Ressources</h3>
-              <p className="text-gray-600">Exploitation responsable des ressources naturelles et développement de solutions énergétiques renouvelables et durables.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 7. Transport & Logistique Terrestre */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Transport & Logistique Terrestre</h3>
-              <p className="text-gray-600">Optimisation des chaînes d'approvisionnement terrestres, transport routier et ferroviaire de marchandises à travers le continent.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 8. Santé & Pharma */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Santé & Pharma</h3>
-              <p className="text-gray-600">Investissements dans les infrastructures médicales, distribution pharmaceutique et amélioration de l'accès aux soins de qualité.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
-          {/* 9. Agriculture & Agro-industrie */}
-          <div className="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-gray-50 flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0a1b3d]">Agriculture & Agro-industrie</h3>
-              <p className="text-gray-600">Développement de filières agricoles performantes, transformation locale et renforcement de la sécurité alimentaire régionale.</p>
-            </div>
-            <span className="inline-block text-[#1e40af] font-semibold cursor-pointer hover:underline">En savoir plus →</span>
-          </div>
-
+          ))}
         </div>
       </section>
     </div>
