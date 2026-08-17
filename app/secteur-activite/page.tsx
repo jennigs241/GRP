@@ -1,21 +1,24 @@
-import Link from "next/link";
+import Link from "next/link"
 
 // Définition des données des 9 secteurs
 const secteurs = [
   {
-    slug: "logistique-maritime",
-    title: "Logistique Maritime & Portuaire",
-    description: "Leader dans la gestion portuaire et le transport maritime international, assurant une fluidité optimale des flux commerciaux et logistiques.",
+    slug: "expertise-maritime",
+    title: "Expertise maritime sur Corps et Facultés navires",
+    description: "Expertise et inspection maritime (« Corps et Facultés ») : évaluation des navires, équipements et cargaisons, gestion des risques et assistance technique.",
+    image: "/WhatsApp-Image-2026-03-05-at-2r1.43.35", // <--- 2. Ajoute le chemin de ton image
   },
   {
-    slug: "transformation-numerique",
-    title: "Transformation Numérique",
-    description: "Accompagnement technologique pour moderniser les infrastructures IT, la cybersécurité et déployer des solutions digitales innovantes.",
+    slug: "avitaillement",
+    title: "Service d'avitaillement",
+    description: "Notre service d'avitaillement (ou ship chandling) est conçu pour garantir la continuité opérationnelle de vos navires et infrastructures en mer, tout en minimisant les temps d'arrêt.",
+    image: "/WhatsApp-iImage-2026-03-05-at-2r1.43.35.jpeg", // <--- 2. Ajoute le chemin de ton image
   },
   {
-    slug: "conseil-financier",
-    title: "Conseil Financier",
-    description: "Expertise stratégique pour la gestion d'actifs, les fusions-acquisitions, l'audit et l'optimisation de la performance financière globale.",
+    slug: "Garbage",
+    title: "Garbage",
+    description: "Notre service assure l'évacuation rapide et sécurisée de tous les résidus générés par les navires, garantissant aux armateurs et capitaines une escale sereine et conforme aux réglementations internationales.",
+    image: "/WhatsAppp-Image-202g6-03-05-at-21.43.33.jpeg",
   },
   {
     slug: "immobilier-btp",

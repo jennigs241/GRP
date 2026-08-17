@@ -44,10 +44,12 @@ export default function AProposPage() {
               À propos de nous
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a1b3d]">
-              Ogooue Groupe : L'Excellence au Cœur de Nos Opérations
+              Ogooue Groupe : La stratégie au Cœur de vos Opérations
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Le Groupe Ogooué s'affirme comme un acteur majeur et diversifié, opérant avec une vision stratégique dans des secteurs clés de l'économie moderne. De la logistique maritime complexe à la transformation numérique, en passant par l'accompagnement financier et le tourisme, le Groupe déploie un savoir-faire unique pour répondre aux enjeux de croissance actuels.
+              Le Groupe Ogooué s’affirme comme un acteur majeur et diversifié, opérant avec une vision stratégique dans des secteurs clés de l’économie moderne. De la logistique maritime complexe à la transformation numérique, en passant par l’accompagnement financier et le tourisme, le Groupe déploie un savoir-faire unique pour répondre aux enjeux de croissance actuels.
+
+Certified Company
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               Fondé sur des valeurs de transparence et de rigueur, nous accompagnons nos partenaires institutionnels et clients privés dans leurs projets les plus ambitieux. Notre ancrage local allié à une expertise internationale nous permet de naviguer avec agilité dans un environnement économique en perpétuelle mutation.

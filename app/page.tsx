@@ -13,10 +13,10 @@ export default function HomePage() {
               Investissements & Services au Gabon
             </span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Bâtir l'avenir de l'économie moderne.
+              La stratégie au coeur de vos opérations.
             </h1>
             <p className="text-lg text-gray-300 max-w-xl">
-              Ogooue Groupe déploie une vision stratégique et un savoir-faire unique dans ses secteurs clés : de la logistique maritime complexe à la transformation numérique qui change vie.
+              Ogooue Groupe déploie une vision stratégique et un savoir-faire unique dans ses secteurs clés : de la logistique maritime complexe à la transformation numérique qui change votre vie.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/secteur-activite" className="bg-[#1e40af] hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition">
@@ -36,7 +36,7 @@ export default function HomePage() {
             {/* Image de substitution ou illustration du port */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0a1b3d]/60 to-transparent z-10" />
             <img 
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" 
+              src="WhhatsApp-Imagess-2026-01-27-at-14.34.23-1.jpeg" 
               alt="Port et logistique maritime" 
               className="w-full h-full object-cover"
             />
@@ -73,7 +73,7 @@ export default function HomePage() {
           
           <div className="rounded-lg overflow-hidden shadow-md">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+              src="/WhatsApp-Immage-20h26-03-05-at-21.43.33.jpeg" 
               alt="Siège Ogooue Groupe" 
               className="w-full h-[350px] object-cover"
             />
@@ -138,9 +138,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {[
-              { title: "Logistique Maritime & Portuaire", desc: "Solutions complexes de transit portuaire et de consignation inter-États adaptées." },
-              { title: "Transformation Numérique", desc: "Accompagnement stratégique pour l'intégration de technologies innovantes pour..." },
-              { title: "Conseil Financier", desc: "Expertise pointue en gestion d'actifs, accompagnement stratégique pour les partenaires." },
+              { title: "Expertise maritime sur Corps et Facultés navires", desc: "évaluation des navires, équipements et cargaisons, gestion des risques et assistance technique." },
+              { title: "Service d'avitaillement", desc: "Notre service d'avitaillement (ou ship chandling) est conçu pour garantir la continuité opérationnelle de vos navires et infrastructures en mer, tout en minimisant les temps d'arrêt." },
+              { title: "Garbage", desc: "Notre service assure l'évacuation rapide et sécurisée de tous les résidus générés par les navires, garantissant aux armateurs et capitaines une escale sereine et conforme aux réglementations internationales." },
               { title: "Immobilier & BTP", desc: "Développement de projets immobiliers modernes et commerciaux, d'actifs résidentiels haut standing." },
               { title: "Tourisme & Hôtellerie", desc: "Développement d'infrastructures touristiques, tradition d'excellence pour valoriser le patrimoine régional." },
               { title: "Énergie & Ressources", desc: "Investissements dans les énergies renouvelables et l'optimisation des ressources naturelles." },
@@ -197,7 +197,7 @@ export default function HomePage() {
             <span className="text-xl">📍</span>
             <div>
               <p className="font-bold text-[#0a1b3d]">Siège Social</p>
-              <p className="text-gray-500">Quartier des Affaires, Libreville, Gabon</p>
+              <p className="text-gray-500">SNI,Owendo,Gabon</p>
             </div>
           </div>
           <div className="flex items-center gap-3">

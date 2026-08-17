@@ -9,7 +9,7 @@ export const actualitesData = [
     excerpt: "Dans le cadre de son plan stratégique, le groupe annonce une série d'investissements technologiques visant à optimiser les flux logistiques...",
     date: "15 MAI 2024",
     read: "4 MIN",
-    img: "https://images.unsplash.com/photo-1541888946425-d0fbb18f8f2d?auto=format&fit=crop&w=1000&q=80",
+    img: "/expertise maritime.jpg",
     isFeatured: true
   },
   {
