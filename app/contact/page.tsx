@@ -32,16 +32,16 @@ export default function ContactPage() {
         {/* Coordonnées */}
         <div className="space-y-8">
           <div className="p-6 border rounded-lg bg-gray-50 space-y-4">
-            <h3 className="text-xl font-bold text-[#0a1b3d]">Siège Social — Libreville, Gabon</h3>
-            <p className="text-sm text-gray-600">Immeuble Horizon, Quartier des Affaires, BP 12450, Libreville</p>
-            <p className="text-sm text-gray-600 font-semibold">📞 +241 01 77 00 00</p>
-            <p className="text-sm text-gray-600 font-semibold">✉️ contact@ogooue-groupe.com</p>
+            <h3 className="text-xl font-bold text-[#0a1b3d]">Siège Social — Owendo, Gabon</h3>
+            <p className="text-sm text-gray-600"> Quartier SNI, Libreville</p>
+            <p className="text-sm text-gray-600 font-semibold">📞 +241 60338708</p>
+            <p className="text-sm text-gray-600 font-semibold">✉️ infos.ogooue_consulting@ogoouegroupe.ga</p>
           </div>
 
           <div className="p-6 bg-[#0a1b3d] text-white rounded-lg space-y-3">
             <h4 className="font-bold text-lg">Support d'urgence 24/7</h4>
             <p className="text-xs text-gray-300">Pour toute urgence opérationnelle concernant nos activités portuaires.</p>
-            <p className="text-xl font-bold text-blue-400">+241 07 44 99 88</p>
+            <p className="text-xl font-bold text-blue-400"> +241 60338708</p>
           </div>
         </div>
       </section>

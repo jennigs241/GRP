@@ -141,12 +141,12 @@ export default function HomePage() {
               { title: "Expertise maritime sur Corps et Facultés navires", desc: "évaluation des navires, équipements et cargaisons, gestion des risques et assistance technique." },
               { title: "Service d'avitaillement", desc: "Notre service d'avitaillement (ou ship chandling) est conçu pour garantir la continuité opérationnelle de vos navires et infrastructures en mer, tout en minimisant les temps d'arrêt." },
               { title: "Garbage", desc: "Notre service assure l'évacuation rapide et sécurisée de tous les résidus générés par les navires, garantissant aux armateurs et capitaines une escale sereine et conforme aux réglementations internationales." },
-              { title: "Immobilier & BTP", desc: "Développement de projets immobiliers modernes et commerciaux, d'actifs résidentiels haut standing." },
-              { title: "Tourisme & Hôtellerie", desc: "Développement d'infrastructures touristiques, tradition d'excellence pour valoriser le patrimoine régional." },
-              { title: "Énergie & Ressources", desc: "Investissements dans les énergies renouvelables et l'optimisation des ressources naturelles." },
-              { title: "Transport & Logistique Terrestre", desc: "Réseaux de distribution inter-États et chaînes de flux à travers le continent." },
-              { title: "Santé & Pharma", desc: "Déploiement d'infrastructure de santé moderne et approvisionnement pharmaceutique et-liques." },
-              { title: "Agriculture & Agro-industrie", desc: "Soutien aux production agricoles durables et la transformation locale des produits." }
+              { title: "Gestion de Quai", desc: "Nous proposons aux autorités portuaires et aux propriétaires de terminaux privés une solution clé en main pour la gestion opérationnelle des quais. Nous transformons vos infrastructures en zones de haute performance grâce à une présence physique constante et une rigueur logistique absolue." },
+              { title: "Service P&I (Protection & Indemnity)", desc: "Protection & Représentation des Intérêts Une gestion rigoureuse des risques et des sinistres maritimes. " },
+              { title: "Consignation de Navires", desc: "Nos services d'agents shippings et de manutention couvrent l'ensemble des besoins opérationnels pour la gestion des navires et des cargaisons, en assurant sécurité, efficacité et conformité aux normes maritimes." },
+              { title: "Plongée Professionnelle & Maintenance Sous-Marine", desc: "Notre équipe de plongeurs professionnels et de techniciens certifiés intervient dans les environnements maritimes les plus exigeants pour garantir la continuité de vos opérations et la sécurité de vos infrastructures." },
+              { title: "placement-personnel-naviguant", desc: "Dans un secteur maritime en constante évolution, la compétence et la fiabilité de l'équipage constituent les véritables piliers de la sécurité en mer et de la rentabilité de vos opérations. Nous sélectionnons, plaçons et administrons des profils hautement qualifiés pour garantir la continuité, l'efficacité et la conformité réglementaire de vos missions maritimes et fluviales." },
+              { title: "manutention-onshore-offshore", desc: "Stevedoring & Acconage" }
             ].map((secteur, index) => (
               <div key={index} className="bg-white p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
                 <div className="space-y-4">
