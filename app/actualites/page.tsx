@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Link from "next/link";
 
 // Base de données des articles d'actualité avec un "slug" unique pour les liens
@@ -14,8 +17,9 @@ export const actualitesData = [
   },
   {
     slug: "partenariat-strategique-consulting",
-    tag: "Finance",
+    tag: "FINANCE",
     title: "Partenariat stratégique : Ogooue Groupe renforce son pôle consulting",
+    excerpt: "Découvrez comment notre pôle consulting étend son expertise pour accompagner nos partenaires...",
     date: "12 MAI 2024",
     read: "4 MIN",
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
@@ -23,8 +27,9 @@ export const actualitesData = [
   },
   {
     slug: "transformation-numerique-interface",
-    tag: "Technologie",
+    tag: "TECHNOLOGIE",
     title: "Transformation numérique : Vers une nouvelle interface",
+    excerpt: "Une refonte complète de nos outils digitaux pour une expérience utilisateur fluidifiée...",
     date: "08 MAI 2024",
     read: "5 MIN",
     img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
@@ -32,8 +37,9 @@ export const actualitesData = [
   },
   {
     slug: "performance-operationnelle-records",
-    tag: "Maritime",
+    tag: "MARITIME",
     title: "Performance Opérationnelle : Les nouveaux records",
+    excerpt: "Nos équipes maritimes atteignent de nouveaux sommets en matière de gestion des flux...",
     date: "04 AVRIL 2024",
     read: "7 MIN",
     img: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80",
@@ -41,8 +47,9 @@ export const actualitesData = [
   },
   {
     slug: "inauguration-complexe-hotelier",
-    tag: "Tourisme",
+    tag: "TOURISME",
     title: "Inauguration : Nouveau complexe hôtelier",
+    excerpt: "Ogooue Tourisme inaugure un nouveau cadre d'exception pour les voyageurs...",
     date: "18 AVRIL 2024",
     read: "3 MIN",
     img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
@@ -50,8 +57,9 @@ export const actualitesData = [
   },
   {
     slug: "bilan-annuel-croissance",
-    tag: "Groupe",
+    tag: "GROUPE",
     title: "Bilan Annuel : Une croissance soutenue",
+    excerpt: "Retour en chiffres sur l'exercice écoulé et les perspectives d'avenir du groupe...",
     date: "02 AVRIL 2024",
     read: "6 MIN",
     img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
@@ -59,8 +67,9 @@ export const actualitesData = [
   },
   {
     slug: "extension-corridors-logistiques",
-    tag: "Logistique",
+    tag: "LOGISTIQUE",
     title: "Extension des corridors logistiques en Afrique centrale",
+    excerpt: "Élargissement de notre réseau de transport pour connecter les pôles clés de la région...",
     date: "28 MARS 2024",
     read: "4 MIN",
     img: "https://images.unsplash.com/photo-1586528116495-23133604f87e?auto=format&fit=crop&w=600&q=80",
@@ -69,8 +78,21 @@ export const actualitesData = [
 ];
 
 export default function ActualitesPage() {
-  const featuredArticle = actualitesData.find(art => art.isFeatured) || actualitesData[0];
-  const otherArticles = actualitesData.filter(art => art.slug !== featuredArticle.slug);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('TOUS');
+
+  const categories = ['TOUS', 'LOGISTIQUE', 'FINANCE', 'TECHNOLOGIE', 'MARITIME', 'TOURISME', 'GROUPE'];
+
+  // Logique de filtrage robuste (compare en majuscules pour éviter les soucis de casse)
+  const filteredArticles = actualitesData.filter(art => {
+    const matchesCategory = selectedCategory === 'TOUS' || art.tag.toUpperCase() === selectedCategory.toUpperCase();
+    const matchesSearch = art.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                          art.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const featuredArticle = filteredArticles.find(art => art.isFeatured) || filteredArticles[0];
+  const otherArticles = filteredArticles.filter(art => !featuredArticle || art.slug !== featuredArticle.slug);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -93,103 +115,138 @@ export default function ActualitesPage() {
       <section className="border-b border-gray-200 bg-white py-4 px-6 sticky top-0 z-20 shadow-xs">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-semibold">
-            <button className="bg-[#0a1b3d] text-white px-4 py-2 rounded transition">TOUS</button>
-            <button className="text-gray-600 hover:text-[#0a1b3d] px-4 py-2 rounded transition">LOGISTIQUE</button>
-            <button className="text-gray-600 hover:text-[#0a1b3d] px-4 py-2 rounded transition">FINANCE</button>
-            <button className="text-gray-600 hover:text-[#0a1b3d] px-4 py-2 rounded transition">TECHNOLOGIE</button>
-            <button className="text-gray-600 hover:text-[#0a1b3d] px-4 py-2 rounded transition">MARITIME</button>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-4 py-2 rounded transition ${
+                  selectedCategory === cat 
+                    ? 'bg-[#0a1b3d] text-white' 
+                    : 'text-gray-600 hover:text-[#0a1b3d] bg-gray-50 md:bg-transparent'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
           <div className="flex items-center w-full md:w-auto gap-2">
             <div className="relative w-full md:w-64">
               <input 
                 type="text" 
                 placeholder="Rechercher un article..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded text-xs focus:outline-none focus:border-[#0a1b3d]"
               />
               <span className="absolute right-3 top-2.5 text-gray-400 text-xs">🔍</span>
             </div>
-            <button className="border border-gray-300 px-3 py-2 rounded text-xs text-gray-600 hover:bg-gray-50">⚙️</button>
+            <button 
+              onClick={() => { setSearchTerm(''); setSelectedCategory('TOUS'); }}
+              title="Réinitialiser les filtres"
+              className="border border-gray-300 px-3 py-2 rounded text-xs text-gray-600 hover:bg-gray-50"
+            >
+              🔄
+            </button>
           </div>
         </div>
       </section>
 
-      {/* 3. SECTION "À LA UNE" */}
-      <section className="py-12 px-6 max-w-7xl mx-auto w-full">
-        <div className="bg-white border border-gray-200 rounded-lg shadow-sm grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-          <div className="relative h-72 lg:h-auto min-h-[300px]">
-            <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] uppercase font-bold px-3 py-1 rounded shadow z-10">
-              À LA UNE
-            </span>
-            <img src={featuredArticle.img} alt={featuredArticle.title} className="w-full h-full object-cover" />
-          </div>
-          <div className="p-8 lg:p-12 flex flex-col justify-between space-y-6">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-xs text-gray-500 font-semibold uppercase tracking-wider">
-                <span className="text-[#1e40af]">{featuredArticle.tag}</span>
-                <span>•</span>
-                <span>{featuredArticle.date}</span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0a1b3d] leading-snug">
-                {featuredArticle.title}
-              </h2>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {featuredArticle.excerpt}
-              </p>
-            </div>
-            <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-              <Link href={`/actualites/${featuredArticle.slug}`} className="bg-[#0a1b3d] hover:bg-blue-900 text-white px-5 py-2.5 rounded text-xs font-semibold transition">
-                LIRE L'ARTICLE COMPLET
-              </Link>
-              <span className="text-xs text-gray-400">{featuredArticle.read} de lecture</span>
-            </div>
-          </div>
+      {/* Si aucun résultat ne correspond */}
+      {filteredArticles.length === 0 ? (
+        <div className="py-24 text-center text-gray-500">
+          <p className="text-lg font-semibold">Aucun article ne correspond à votre recherche.</p>
+          <button 
+            onClick={() => { setSearchTerm(''); setSelectedCategory('TOUS'); }} 
+            className="mt-4 text-xs bg-[#0a1b3d] text-white px-4 py-2 rounded"
+          >
+            Réinitialiser les filtres
+          </button>
         </div>
-      </section>
-
-      {/* 4. SECTION "DERNIÈRES PUBLICATIONS" */}
-      <section className="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto space-y-8">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-[#0a1b3d] flex items-center gap-2">
-              <span>📄</span> Dernières Publications
-            </h2>
-            <span className="text-xs text-gray-500 font-semibold">Affichage des articles récents</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {otherArticles.map((art) => (
-              <div key={art.slug} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                  <div className="relative h-48">
-                    <span className="absolute top-3 left-3 bg-[#0a1b3d] text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">
-                      {art.tag}
-                    </span>
-                    <img src={art.img} alt={art.title} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="p-6 space-y-3">
-                    <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase tracking-wider">
-                      <span>{art.date}</span>
+      ) : (
+        <>
+          {/* 3. SECTION "À LA UNE" */}
+          {featuredArticle && (
+            <section className="py-12 px-6 max-w-7xl mx-auto w-full">
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                <div className="relative h-72 lg:h-auto min-h-[300px]">
+                  <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] uppercase font-bold px-3 py-1 rounded shadow z-10">
+                    À LA UNE
+                  </span>
+                  <img src={featuredArticle.img} alt={featuredArticle.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-between space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                      <span className="text-[#1e40af]">{featuredArticle.tag}</span>
                       <span>•</span>
-                      <span>{art.read} DE LECTURE</span>
+                      <span>{featuredArticle.date}</span>
                     </div>
-                    <h3 className="font-bold text-[#0a1b3d] text-base leading-snug">
-                      {art.title}
-                    </h3>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#0a1b3d] leading-snug">
+                      {featuredArticle.title}
+                    </h2>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {featuredArticle.excerpt}
+                    </p>
                   </div>
-                </div>
-
-                <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-gray-100 text-xs">
-                  <Link href={`/actualites/${art.slug}`} className="text-[#1e40af] font-bold hover:underline">Lire la suite →</Link>
-                  <div className="flex gap-2 text-gray-400">
-                    <button className="hover:text-[#0a1b3d]">🔗</button>
-                    <button className="hover:text-[#0a1b3d]">🔖</button>
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <Link href={`/actualites/${featuredArticle.slug}`} className="bg-[#0a1b3d] hover:bg-blue-900 text-white px-5 py-2.5 rounded text-xs font-semibold transition">
+                      LIRE L'ARTICLE COMPLET
+                    </Link>
+                    <span className="text-xs text-gray-400">{featuredArticle.read} de lecture</span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </section>
+          )}
+
+          {/* 4. SECTION "DERNIÈRES PUBLICATIONS" */}
+          {otherArticles.length > 0 && (
+            <section className="bg-gray-50 py-16 px-6 border-t border-gray-200">
+              <div className="max-w-7xl mx-auto space-y-8">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl font-bold text-[#0a1b3d] flex items-center gap-2">
+                    <span>📄</span> Dernières Publications
+                  </h2>
+                  <span className="text-xs text-gray-500 font-semibold">{otherArticles.length} article(s) affiché(s)</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {otherArticles.map((art) => (
+                    <div key={art.slug} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                      <div>
+                        <div className="relative h-48">
+                          <span className="absolute top-3 left-3 bg-[#0a1b3d] text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">
+                            {art.tag}
+                          </span>
+                          <img src={art.img} alt={art.title} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="p-6 space-y-3">
+                          <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                            <span>{art.date}</span>
+                            <span>•</span>
+                            <span>{art.read} DE LECTURE</span>
+                          </div>
+                          <h3 className="font-bold text-[#0a1b3d] text-base leading-snug">
+                            {art.title}
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-gray-100 text-xs">
+                        <Link href={`/actualites/${art.slug}`} className="text-[#1e40af] font-bold hover:underline">Lire la suite →</Link>
+                        <div className="flex gap-2 text-gray-400">
+                          <button className="hover:text-[#0a1b3d]">🔗</button>
+                          <button className="hover:text-[#0a1b3d]">🔖</button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+        </>
+      )}
     </div>
   );
 }

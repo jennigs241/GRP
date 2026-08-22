@@ -1,4 +1,40 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function ContactPage() {
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResult("Envoi en cours...");
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "36c401d1-0dba-4c27-8b25-e4a23ce2ac5d");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message envoyé avec succès ! Nous vous répondrons rapidement.");
+        (event.target as HTMLFormElement).reset();
+      } else {
+        setResult("Une erreur est survenue, veuillez réessayer.");
+      }
+    } catch (error) {
+      setResult("Erreur de connexion, veuillez vérifier votre réseau.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col bg-white">
       <section className="bg-[#0a1b3d] text-white py-20 px-6">
@@ -15,17 +51,29 @@ export default function ContactPage() {
         {/* Formulaire */}
         <div className="bg-white p-8 border rounded-lg shadow-sm space-y-6">
           <h2 className="text-2xl font-bold text-[#0a1b3d]">Envoyez un message</h2>
-          <form className="space-y-4">
+          
+          <form onSubmit={onSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="Prénom" className="p-3 border rounded-sm w-full text-sm" />
-              <input type="text" placeholder="Nom" className="p-3 border rounded-sm w-full text-sm" />
+              <input type="text" name="prenom" placeholder="Prénom" required className="p-3 border rounded-sm w-full text-sm outline-none focus:ring-2 focus:ring-blue-900" />
+              <input type="text" name="nom" placeholder="Nom" required className="p-3 border rounded-sm w-full text-sm outline-none focus:ring-2 focus:ring-blue-900" />
             </div>
-            <input type="email" placeholder="Email Professionnel" className="p-3 border rounded-sm w-full text-sm" />
-            <input type="tel" placeholder="Téléphone" className="p-3 border rounded-sm w-full text-sm" />
-            <textarea placeholder="Votre Message" rows={4} className="p-3 border rounded-sm w-full text-sm"></textarea>
-            <button type="submit" className="w-full bg-[#0a1b3d] text-white py-4 rounded-sm font-semibold hover:bg-blue-900 transition">
-              Envoyez ma demande
+            <input type="email" name="email" placeholder="Email Professionnel" required className="p-3 border rounded-sm w-full text-sm outline-none focus:ring-2 focus:ring-blue-900" />
+            <input type="tel" name="telephone" placeholder="Téléphone" className="p-3 border rounded-sm w-full text-sm outline-none focus:ring-2 focus:ring-blue-900" />
+            <textarea name="message" placeholder="Votre Message" rows={4} required className="p-3 border rounded-sm w-full text-sm outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+            
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="w-full bg-[#0a1b3d] text-white py-4 rounded-sm font-semibold hover:bg-blue-900 transition disabled:opacity-70"
+            >
+              {isSubmitting ? "Envoi en cours..." : "Envoyez ma demande"}
             </button>
+
+            {result && (
+              <p className={`text-center text-sm font-medium mt-2 ${result.includes('succès') ? 'text-green-600' : 'text-blue-900'}`}>
+                {result}
+              </p>
+            )}
           </form>
         </div>
 
