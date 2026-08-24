@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   className="object-contain"
                 />
               </div>
-              <span className="font-bold text-lg md:text-xl tracking-wide">OGOOUE GRP</span>
+             
             </Link>
 
             {/* NAVIGATION (Adaptée et responsive pour tous les écrans) */}
