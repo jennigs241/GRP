@@ -183,7 +183,7 @@ Certified Company
             <div className="relative space-y-1">
               <span className="absolute -left-[31px] md:-left-[47px] top-1 w-4 h-4 bg-[#1e40af] rounded-full border-4 border-white" />
               <span className="text-xs font-bold text-blue-600">2008</span>
-              <h3 className="text-xl font-bold text-[#0a1b3d]">Fondation d'Ogooue Logistics</h3>
+              <h3 className="text-xl font-bold text-[#0a1b3d]">Fondation d'Ogooue consulting</h3>
               <p className="text-gray-600 text-xs">Création de la première entité dédiée à la consignation maritime et à la manutention portuaire à Libreville.</p>
             </div>
 
@@ -198,25 +198,25 @@ Certified Company
             {/* Timeline Item 3 */}
             <div className="relative space-y-1">
               <span className="absolute -left-[31px] md:-left-[47px] top-1 w-4 h-4 bg-[#1e40af] rounded-full border-4 border-white" />
-              <span className="text-xs font-bold text-blue-600">2016</span>
-              <h3 className="text-xl font-bold text-[#0a1b3d]">Naissance d'Ogooue Digital</h3>
-              <p className="text-gray-600 text-xs">Lancement de notre branche technologique spécialisée dans la transformation numérique des administrations.</p>
+              <span className="text-xs font-bold text-blue-600">2021</span>
+              <h3 className="text-xl font-bold text-[#0a1b3d]">Naissance d'Ogooue Travels</h3>
+              <p className="text-gray-600 text-xs">Lancement de notre branche spécialisée dans la billetterie aérienne et la location de véhicules.</p>
             </div>
 
             {/* Timeline Item 4 */}
             <div className="relative space-y-1">
               <span className="absolute -left-[31px] md:-left-[47px] top-1 w-4 h-4 bg-[#1e40af] rounded-full border-4 border-white" />
-              <span className="text-xs font-bold text-blue-600">2019</span>
-              <h3 className="text-xl font-bold text-[#0a1b3d]">Diversification Financière & Conseil</h3>
-              <p className="text-gray-600 text-xs">Création d'Ogooue Consulting pour accompagner les investisseurs institutionnels dans la sous-région.</p>
+              <span className="text-xs font-bold text-blue-600">2024</span>
+              <h3 className="text-xl font-bold text-[#0a1b3d]">Naissance d'Ogooue Digital services</h3>
+              <p className="text-gray-600 text-xs">Naissance d'Ogooué Digital Services, notre filiale experte dédiée à l'imprimerie numérique et aux prestations technologiques innovantes.</p>
             </div>
 
             {/* Timeline Item 5 */}
             <div className="relative space-y-1">
               <span className="absolute -left-[31px] md:-left-[47px] top-1 w-4 h-4 bg-[#1e40af] rounded-full border-4 border-white" />
-              <span className="text-xs font-bold text-blue-600">2023</span>
+              <span className="text-xs font-bold text-blue-600">2026</span>
               <h3 className="text-xl font-bold text-[#0a1b3d]">Consolidation du Groupe</h3>
-              <p className="text-gray-600 text-xs">Unification des entités sous la bannière Ogooue Groupe et certification ISO globale.</p>
+              <p className="text-gray-600 text-xs">Unification des entités sous la bannière Ogooue Groupe .</p>
             </div>
 
           </div>
